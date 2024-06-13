@@ -1,0 +1,251 @@
+/* General styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-y: auto; /* Ensure content scrolls vertically when needed */
+}
+
+header, footer {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensure header and footer are above other content */
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 40px; /* Adjust top margin to accommodate fixed header */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 40px; /* Adjust top margin to accommodate fixed header */
+    margin-bottom: 40px; /* Adjust bottom margin to accommodate fixed footer */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Product grid and card styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h2 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    margin: 5px 0;
+}
+
+.product-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto; /* Ensure button is at the bottom */
+}
+
+.product-card a:hover {
+    background-color: #218838;
+}
+
+/* Payment form and related styles */
+#payment-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.StripeElement {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    transition: box-shadow 150ms ease;
+    margin-bottom: 10px;
+}
+
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}
+
+.title {
+    color: #eee;
+}
+
+/* Product details container */
+.product-details-container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details-container h1 {
+    margin-bottom: 20px;
+}
+
+.product-details-container p {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.back-button, .pay-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: #007bff; /* Blue background color */
+    border: 1px solid #007bff;
+    margin-bottom: 10px;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    border-color: #6cacf1;
+}
+
+.pay-button {
+    background-color: #28a745; /* Green background color */
+    border: 1px solid #28a745; /* Green border color */
+    margin-top: 10px;
+}
+
+.pay-button:hover {
+    background-color: #218838; /* Darker green background color on hover */
+    border-color: #1e7e34; /* Darker green border color on hover */
+}
+
+.back-button-container {
+    margin: 0 auto;
+    float: none;
+    display: table;
+}
+
+/* Success page specific styles */
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(50vh - 50px); /* Adjust for header and footer height */
+}
+
+.success-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 25%; /* Limit width of the success card */
+}
+
+.green_text{
+    color: green;
+}
+
+.success-card h2 {
+    margin: 10px 0;
+}
+
+.success-card p {
+    margin: 5px 0;
+}
+
+.success-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.success-card .btn.btn-success {
+    background-color: #28a745; /* Green background color */
+    border: 1px solid #28a745; /* Green border color */
+    margin-top: 10px;
+}
+
+.success-card .btn.btn-success:hover {
+    background-color: #218838; /* Darker green background color on hover */
+    border-color: #1e7e34; /* Darker green border color on hover */
+}
