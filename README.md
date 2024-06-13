@@ -1,3 +1,22 @@
+Download project as ZIP
+
+Extract the project
+
+Go inside the project and run 'composer update'
+
+Once all required vendors updated.
+
+Create table named 'grocery' and update DB credentials in .env file
+
+Run 'php artisan migrate'
+
+Run 'php artisan db:seed --class=ProductsTableSeeder'
+
+Change your testing Stripe keys in .env 
+
+Finally, Run 'php artisan serve'
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
